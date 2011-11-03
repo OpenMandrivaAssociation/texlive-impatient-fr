@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /info/impatient
+# catalog-date 2009-06-03 15:47:29 +0200
+# catalog-license fdl
+# catalog-version undef
 Name:		texlive-impatient-fr
 Version:	20090603
 Release:	1
@@ -48,6 +54,7 @@ translation.
 %doc %{_texmfdistdir}/doc/plain/impatient-fr/fusermacs.tex
 %doc %{_texmfdistdir}/doc/plain/impatient-fr/fusingtex.tex
 %doc %{_texmfdistdir}/doc/plain/impatient-fr/fxmptext.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -58,3 +65,5 @@ translation.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
