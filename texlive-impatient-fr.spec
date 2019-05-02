@@ -5,8 +5,8 @@
 # catalog-license fdl
 # catalog-version undef
 Name:		texlive-impatient-fr
-Version:	20180303
-Release:	2
+Version:	20190228
+Release:	1
 Summary:	Free edition of the book "TeX for the Impatient"
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/info/impatient
