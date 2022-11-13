@@ -1,18 +1,12 @@
-# revision 15878
-# category Package
-# catalog-ctan /info/impatient
-# catalog-date 2009-06-03 15:47:29 +0200
-# catalog-license fdl
-# catalog-version undef
 Name:		texlive-impatient-fr
-Version:	20190228
+Version:	54080
 Release:	1
 Summary:	Free edition of the book "TeX for the Impatient"
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/info/impatient
 License:	FDL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/impatient-fr.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/impatient-fr.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/impatient-fr.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/impatient-fr.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -55,24 +49,10 @@ translation.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20090603-2
-+ Revision: 752734
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20090603-1
-+ Revision: 718712
-- texlive-impatient-fr
-- texlive-impatient-fr
-- texlive-impatient-fr
-- texlive-impatient-fr
-
